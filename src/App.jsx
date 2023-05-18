@@ -21,6 +21,9 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0,document.body.scrollHeight);
+  } , []);
   // const Header = useMemo(
   //   () => {return (
   //     <div id="header">
