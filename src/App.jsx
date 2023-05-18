@@ -11,15 +11,15 @@ import { faLock,faCamera } from '@fortawesome/free-solid-svg-icons'
 
 
 function App() {
-  // const [date, setDate] = useState(dayjs());
+  const [date, setDate] = useState(dayjs());
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setDate(dayjs());
-  //   }, 1000 * 60);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDate(dayjs());
+    }, 1000 * 60);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   // const Header = useMemo(
   //   () => {return (
@@ -38,12 +38,14 @@ function App() {
         <div className="container" style={{ }}>
 
           <div id="header">
-            <FontAwesomeIcon icon={faLock} style={{color: "#ffffff",}} />          <p id="date" style={{color: 'white'}}>Wednesday, 18 May 2023</p>
-              <p id="time" style={{color: 'white'}}>11:11</p>
+            <FontAwesomeIcon icon={faLock} style={{color: "#ffffff",}} />         
+             <p id="date" style={{color: 'white'}}>{date.format("dddd, DD MMMM")}</p>
+              <p id="time" style={{color: 'white'}}>{date.format("hh:mm")}</p>
             </div>
 
             <div >
               notifications
+              {JSON.stringify(date)}
             </div>
           </div>
 
