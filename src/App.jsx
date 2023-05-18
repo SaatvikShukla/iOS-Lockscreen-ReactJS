@@ -43,9 +43,8 @@ function App() {
               <p id="time" style={{color: 'white'}}>{date.format("hh:mm")}</p>
             </div>
 
-            <div >
-              notifications
-              {JSON.stringify(date)}
+            <div id='notificationSection'>
+              No Older Notifications
             </div>
           </div>
 

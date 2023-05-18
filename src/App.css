@@ -102,6 +102,11 @@ body {
   padding: 0px;
 }
 
+#notificationSection {
+  display: flex;
+  justify-content: center;
+}
+
 #footer {
   margin-top: auto;
   display: flex;
