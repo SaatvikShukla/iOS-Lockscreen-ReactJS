@@ -1,17 +1,18 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css';
 import './AppleSF.css';
+import './App.css';
 import image from './assets/images/wallpaper.webp'
 import dayjs from "dayjs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faCamera } from '@fortawesome/free-solid-svg-icons'
-
+import NotificationList  from './components/NotificationList'
 
 
 function App() {
   const [date, setDate] = useState(dayjs());
+  const [goFS, setGoFS] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,33 +22,40 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0,document.body.scrollHeight);
-  } , []);
-  // const Header = useMemo(
-  //   () => {return (
-  //     <div id="header">
-  //       {/* <Ionicons name="ios-lock-closed" size={20} color="white" /> */}
-  //       <p id="date" style={{color: 'white'}}>{date.format("dddd, DD MMMM")}</p>
-  //       <p id="time" style={{color: 'white'}}>{date.format("hh:mm")}</p>
-  //     </div>
-  //   )},
-  //   [date]
-  // );
+  // Find the right method, call on correct element
+  function launchFullScreen(element) {
+    if(element.requestFullScreen) {
+      element.requestFullScreen();
+    } else if(element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if(element.webkitRequestFullScreen) {
+      element.webkitRequestFullScreen();
+    }
+  }
     
+  function launchFS(){
+    if(goFS){
+      console.log("triggered")
+      launchFullScreen(document.documentElement); // the whole page
+      setGoFS(true);
+    } else {
+      
+    }
+  }
   return (
     <>
-      <div id="appWrapper">
+      <div id="appWrapper" >
         <div className="container" style={{ }}>
 
           <div id="header">
             <FontAwesomeIcon icon={faLock} style={{color: "#ffffff",}} />         
              <p id="date" style={{color: 'white'}}>{date.format("dddd, DD MMMM")}</p>
-              <p id="time" style={{color: 'white'}}>{date.format("hh:mm")}</p>
+              <p id="time" style={{color: 'white'}}>{date.format("h:mm")}</p>
             </div>
 
             <div id='notificationSection'>
-              No Older Notifications
+              {/* No Older Notifications */}
+              <NotificationList />
             </div>
           </div>
 
