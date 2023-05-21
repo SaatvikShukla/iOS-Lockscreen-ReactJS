@@ -9,7 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faCamera } from '@fortawesome/free-solid-svg-icons'
 import NotificationList  from './components/NotificationList'
 // import Animated, {SlideIn, SlideInDown, SlideInUp} from 'react-native-reanimated';
-
+import flashImg from "./assets/flash.png";
+import LockImg from "./assets/lock.png";
 function App() {
   const [date, setDate] = useState(dayjs());
   const [goFS, setGoFS] = useState(false);
@@ -51,9 +52,10 @@ function App() {
 
           </Animated.View> */}
           <div id="header">
-            <FontAwesomeIcon icon={faLock} style={{color: "#ffffff",}} />         
-             <p id="date" style={{color: 'white'}}>{date.format("dddd, DD MMMM")}</p>
-              <p id="time" style={{color: 'white'}}>{date.format("h:mm")}</p>
+            {/* <FontAwesomeIcon icon={faLock} style={{color: "#ffffff",}} />          */}
+            <img src={LockImg} style={{width: "20px"}} />
+            <p id="date" style={{color: 'white'}}>{date.format("dddd, DD MMMM")}</p>
+            <p id="time" style={{color: 'white'}}>{date.format("h:mm")}</p>
             </div>
 
             <div id='notificationSection'>
@@ -65,7 +67,8 @@ function App() {
           <div id='footer'>
             <span className='LockIconWrapper'>
               {/* <FontAwesomeIcon icon="fa-solid fa-flashlight" rotation={270} style={{color: "#ffffff",}} /> */}
-              <FontAwesomeIcon icon={faCamera} style={{color: "#ffffff",}} />
+              {/* <FontAwesomeIcon icon={faCamera} style={{color: "#ffffff",}} /> */}
+              <img src={flashImg} style={{width: '14px'}} />
             </span>
 
             <div className='LockIconWrapper'>

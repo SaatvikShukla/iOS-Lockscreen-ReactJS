@@ -81,7 +81,7 @@
       <div className="notifWrapper">
         <img src={data.icon} className="notifIcon" />
         <div className="rightNotifWrapper">
-          <span className="notifTitle">{data.title}</span>
+          <span className="notifTitle"><b>{data.title}</b></span>
           <span className="notifSubTitle">{data.subtitle}</span>
           {/* <span className='notifCreatedAt'>{data.createdAt} ago</span> */}
         </div>

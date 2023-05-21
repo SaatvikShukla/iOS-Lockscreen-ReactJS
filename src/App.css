@@ -51,7 +51,7 @@
 #appWrapper {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  max-height: 100dvh;
 }
 
 .container {
@@ -75,7 +75,7 @@
 }
 body {
   max-width: 1280px;
-  background-image:url('./assets/images/b7.jpg');
+  background-image:url('./assets/images/blue.jpg');
   background-repeat:no-repeat;
   background-size: contain;
   background-position: center;
@@ -99,7 +99,7 @@ body {
 
 #date {
   color: #C3FFFE;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   margin-top: 20px !important;
 }

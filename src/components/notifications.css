@@ -1,7 +1,7 @@
 #notificationSection {
     flex-direction: column;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .notifIcon {
@@ -31,14 +31,17 @@
 
 .notifTitle {
     color: white;
-    font-weight: 500;
-    letter-spacing: 0.2;;
+    /* font-weight: 500; */
+    letter-spacing: 0.1px;
+    font-size: 16px;
 }
 
 .notifSubTitle {
     color: white;
     line-height: 1.2;
-    letter-spacing: 0.2;
+    letter-spacing: 0.1px;
+    font-size: 14px;
+    margin-top: 4px;
 }
 
 .notifCreatedAt  {
