@@ -46,14 +46,14 @@ export default [
     title: "Team meeting",
     subtitle: "10:00 - 11:00",
   },
-  {
-    id: "6",
-    createdAt: "5h",
-    icon: mail,
-    title: "Hola Vadim",
-    subtitle:
-      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing",
-  },
+  // {
+  //   id: "6",
+  //   createdAt: "5h",
+  //   icon: mail,
+  //   title: "Hola Vadim",
+  //   subtitle:
+  //     "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing",
+  // },
   {
     id: "7",
     createdAt: "6h",
