@@ -68,7 +68,7 @@
   /* padding: 2rem; */
   line-height: 1 !important;
   min-height: inherit;
-  max-width: 411px;
+  max-width: min(416px, 100dvw);
     width: 100%;
     max-height: 100dvh !important;
     overflow: overlay;
