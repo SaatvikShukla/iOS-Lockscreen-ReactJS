@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faCamera } from '@fortawesome/free-solid-svg-icons'
 import NotificationList  from './components/NotificationList'
-
+// import Animated, {SlideIn, SlideInDown, SlideInUp} from 'react-native-reanimated';
 
 function App() {
   const [date, setDate] = useState(dayjs());
@@ -47,6 +47,9 @@ function App() {
       <div id="appWrapper" >
         <div className="container" style={{ }}>
 
+          {/* <Animated.View entering={SlideInDown} exiting={SlideInUp}>
+
+          </Animated.View> */}
           <div id="header">
             <FontAwesomeIcon icon={faLock} style={{color: "#ffffff",}} />         
              <p id="date" style={{color: 'white'}}>{date.format("dddd, DD MMMM")}</p>

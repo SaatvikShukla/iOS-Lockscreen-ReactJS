@@ -1,6 +1,8 @@
 import calendar from "../images/apps/calendar.png";
 import fitness from "../images/apps/fitness.webp";
 import mail from "../images/apps/mail.png";
+import whatsapp from "../images/apps/whatsapp.png";
+import linkedin from "../images/apps/linkedin.png";
 
 export default [
   {
@@ -13,16 +15,19 @@ export default [
   {
     id: "2",
     createdAt: "10m",
-    icon: calendar,
-    title: "Team meeting",
-    subtitle: "10:00 - 11:00",
+    icon: whatsapp,
+    title: "Petunia",
+    subtitle: `
+        [Design] Web iOS Project ––
+        First cut designs are good to go!🚀 Let's start building!
+    `,
   },
   {
     id: "3",
     createdAt: "45m",
-    icon: mail,
-    title: "notJust.dev inquiry",
-    subtitle: "Hey Vadim, how is it going? ",
+    icon: linkedin,
+    title: "Linkedin",
+    subtitle: "Antonio & 9,453 others liked your post! ",
   },
   {
     id: "4",
@@ -44,7 +49,7 @@ export default [
     icon: mail,
     title: "Hola Vadim",
     subtitle:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing",
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing",
   },
   {
     id: "7",
@@ -113,7 +118,7 @@ export default [
     id: "16",
     createdAt: "6h",
     icon: fitness,
-    title: "10,000 steps",
+    title: "0 steps",
     subtitle: "Your best day this week was Friday. Finish the week strong.",
   },
 ];
